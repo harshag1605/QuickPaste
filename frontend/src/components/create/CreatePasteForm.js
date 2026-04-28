@@ -14,7 +14,7 @@ export default function CreatePasteForm({ formData, setFormData, onSubmit, isLoa
 
   return (
     <GlassCard className="p-6 sm:p-8">
-      <div className="mb-8 space-y-3">
+      <div className="mb-8 space-y-5">
         <span className="hero-chip">
           <Sparkles className="h-4 w-4 text-secondary" />
           New post
@@ -22,7 +22,7 @@ export default function CreatePasteForm({ formData, setFormData, onSubmit, isLoa
         <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Create a polished, secure share
         </h1>
-        <p className="text-slate-600">
+        <p className="text-slate-500"> 
           Configure metadata, privacy, and content type while your live preview updates in real
           time.
         </p>
