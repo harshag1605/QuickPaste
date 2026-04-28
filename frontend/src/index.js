@@ -1,0 +1,32 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import './styles/tailwind.generated.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            background: 'rgba(17, 24, 39, 0.92)',
+            color: '#ffffff',
+            border: '1px solid rgba(255,255,255,0.08)',
+            backdropFilter: 'blur(14px)',
+          },
+        }}
+      />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

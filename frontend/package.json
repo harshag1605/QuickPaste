@@ -1,0 +1,54 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.15.2",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.11.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.14.2",
+    "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^16.1.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "concurrently \"npm:tailwind:watch\" \"npm:react:start\"",
+    "react:start": "react-scripts start",
+    "build": "npm run tailwind:build && react-scripts build",
+    "test": "npm run tailwind:build && react-scripts test",
+    "tailwind:build": "tailwindcss -i ./src/styles/tailwind.input.css -o ./src/styles/tailwind.generated.css",
+    "tailwind:watch": "tailwindcss -i ./src/styles/tailwind.input.css -o ./src/styles/tailwind.generated.css --watch",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "concurrently": "^9.2.1",
+    "postcss": "^8.5.12",
+    "tailwindcss": "^3.4.19"
+  }
+}
