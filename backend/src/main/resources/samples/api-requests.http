@@ -1,0 +1,39 @@
+### Create a paste
+POST http://localhost:8080/api/pastes
+Content-Type: application/json
+
+{
+  "title": "Hello Java",
+  "content": "public class Main { public static void main(String[] args) { System.out.println(\"Hello QuickPaste\"); } }",
+  "language": "java",
+  "visibility": "PUBLIC"
+}
+
+### Create a private paste with expiry
+POST http://localhost:8080/api/pastes
+Content-Type: application/json
+
+{
+  "title": "Temporary note",
+  "content": "This paste expires later.",
+  "language": "text",
+  "expiresAt": "2030-12-31T23:59:59",
+  "visibility": "PRIVATE"
+}
+
+### Get a paste by shareId
+GET http://localhost:8080/api/pastes/REPLACE_WITH_SHARE_ID
+
+### Update a paste by MongoDB id
+PUT http://localhost:8080/api/pastes/REPLACE_WITH_ID
+Content-Type: application/json
+
+{
+  "title": "Updated title",
+  "content": "Updated paste content",
+  "language": "text",
+  "visibility": "PUBLIC"
+}
+
+### Delete a paste by MongoDB id
+DELETE http://localhost:8080/api/pastes/REPLACE_WITH_ID
