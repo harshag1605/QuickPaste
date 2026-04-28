@@ -26,11 +26,11 @@ public class PasteController {
 
 	private final PasteService pasteService;
 
-	@PostMapping
-	public ResponseEntity<Paste> createPaste(@Valid @RequestBody PasteRequest request) {
-		Paste createdPaste = pasteService.createPaste(request);
-		return ResponseEntity.status(HttpStatus.CREATED).body(createdPaste);
-	}
+	// @PostMapping
+	// public ResponseEntity<Paste> createPaste(@Valid @RequestBody PasteRequest request) {
+	// 	Paste createdPaste = pasteService.createPaste(request);
+	// 	return ResponseEntity.status(HttpStatus.CREATED).body(createdPaste);
+	// }
 
 	@GetMapping("/{shareId}")
 	public ResponseEntity<Paste> getPasteByShareId(@PathVariable String shareId) {
