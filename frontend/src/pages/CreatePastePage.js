@@ -2,20 +2,17 @@ import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
+import api from '../api';
 import PageShell from '../components/layout/PageShell';
 import CreatePasteForm from '../components/create/CreatePasteForm';
 import PreviewPanel from '../components/create/PreviewPanel';
 
 const initialState = {
-  title: 'Weekly reflection',
+  title: '',
   language: 'General Note',
   expiry: '7 days',
   password: '',
-  code: `Today we wrapped the onboarding flow and collected feedback from the first group of testers.
-
-The strongest response was around simplicity. People loved being able to write one clean paragraph, generate a link, and share it immediately.
-
-Next, we should improve search, add folders, and keep the experience just as lightweight.`,
+  code: '',
 };
 
 export default function CreatePastePage() {
@@ -30,15 +27,43 @@ export default function CreatePastePage() {
     [formData]
   );
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setIsLoading(true);
+  const mapExpiry = (expiry) => {
+    const now = new Date();
+    switch (expiry) {
+      case '1 hour': return new Date(now.getTime() + 60 * 60 * 1000).toISOString();
+      case '24 hours': return new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString();
+      case '7 days': return new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString();
+      case '30 days': return new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString();
+      default: return null;
+    }
+  };
 
-    window.setTimeout(() => {
-      setIsLoading(false);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!formData.code.trim()) {
+      toast.error('Content cannot be empty');
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const payload = {
+        title: formData.title || 'Untitled',
+        content: formData.code,
+        language: formData.language,
+        expiresAt: mapExpiry(formData.expiry),
+        visibility: 'PUBLIC' // Default for now
+      };
+
+      const result = await api.createPaste(payload);
       toast.success('Post published successfully');
-      navigate('/paste/qs-93lx2');
-    }, 1100);
+      navigate(`/paste/${result.shareId}`);
+    } catch (error) {
+      console.error('Failed to create paste:', error);
+      toast.error(error.response?.data?.message || 'Failed to publish post');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (

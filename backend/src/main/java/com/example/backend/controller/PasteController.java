@@ -21,6 +21,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/api/pastes")
 @RequiredArgsConstructor
+@org.springframework.web.bind.annotation.CrossOrigin(origins = "http://localhost:3000")
 public class PasteController {
 
 	private final PasteService pasteService;
