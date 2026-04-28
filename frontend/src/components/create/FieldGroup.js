@@ -9,8 +9,8 @@ export default function FieldGroup({ label, hint, children, delay = 0 }) {
       className="block space-y-3"
     >
       <div className="flex items-center justify-between gap-3">
-        <span className="text-sm font-medium text-white">{label}</span>
-        {hint ? <span className="text-xs text-gray-400">{hint}</span> : null}
+        <span className="text-sm font-medium text-slate-900">{label}</span>
+        {hint ? <span className="text-xs text-slate-600">{hint}</span> : null}
       </div>
       {children}
     </motion.label>

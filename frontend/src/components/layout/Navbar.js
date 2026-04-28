@@ -15,7 +15,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="sticky top-0 z-40 border-b border-white/5 bg-night/70 backdrop-blur-xl"
+      className="sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur-xl"
     >
       <div className="section-shell flex h-20 items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-3">
@@ -23,19 +23,19 @@ export default function Navbar() {
             <FileText className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-lg font-semibold tracking-wide text-white">Quick Paste</p>
-            <p className="text-xs uppercase tracking-[0.28em] text-gray-400">Instant text sharing</p>
+            <p className="text-lg font-semibold tracking-wide text-slate-900">Quick Paste</p>
+            <p className="text-xs uppercase tracking-[0.28em] text-slate-500">Instant text sharing</p>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1 md:flex">
+        <nav className="hidden items-center gap-2 rounded-full border border-slate-200 bg-white/90 p-1 md:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               className={({ isActive }) =>
                 `rounded-full px-4 py-2 text-sm transition ${
-                  isActive ? 'bg-white/10 text-white' : 'text-gray-300 hover:text-white'
+                  isActive ? 'bg-slate-100 text-slate-900' : 'text-slate-600 hover:text-slate-900'
                 }`
               }
             >

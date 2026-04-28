@@ -6,7 +6,7 @@ const MotionLink = motion(Link);
 export default function GradientLink({ children, className = '', variant = 'primary', ...props }) {
   const variantClass =
     variant === 'ghost'
-      ? 'border border-white/10 bg-white/5 text-white hover:border-cyan-400/40 hover:bg-white/10'
+      ? 'border border-slate-200 bg-white/90 text-slate-900 hover:border-cyan-400/40 hover:bg-slate-100'
       : 'bg-button-gradient text-white shadow-glow';
 
   return (

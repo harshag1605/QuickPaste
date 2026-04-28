@@ -25,8 +25,8 @@ export default function HomePage() {
         >
           {stats.map((item, index) => (
             <GlassCard key={item.label} className="p-6" delay={index * 0.05}>
-              <p className="text-3xl font-semibold text-white">{item.value}</p>
-              <p className="mt-2 text-gray-400">{item.label}</p>
+              <p className="text-3xl font-semibold text-slate-900">{item.value}</p>
+              <p className="mt-2 text-slate-600">{item.label}</p>
             </GlassCard>
           ))}
         </motion.div>

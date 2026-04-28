@@ -13,8 +13,8 @@ export default function SectionHeading({ eyebrow, title, description, align = 'c
     >
       <span className="hero-chip">{eyebrow}</span>
       <div className="space-y-3">
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">{title}</h2>
-        <p className="text-base leading-7 text-gray-300 sm:text-lg">{description}</p>
+        <h2 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">{title}</h2>
+        <p className="text-base leading-7 text-slate-600 sm:text-lg">{description}</p>
       </div>
     </motion.div>
   );

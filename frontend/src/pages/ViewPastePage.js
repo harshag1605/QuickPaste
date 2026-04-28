@@ -67,8 +67,8 @@ export default function ViewPastePage() {
     return (
       <PageShell>
         <div className="flex min-h-[60vh] flex-col items-center justify-center space-y-4">
-          <h2 className="text-2xl font-semibold text-white">Post not found</h2>
-          <p className="text-gray-400">This post may have expired or never existed.</p>
+          <h2 className="text-2xl font-semibold text-slate-900">Post not found</h2>
+          <p className="text-slate-600">This post may have expired or never existed.</p>
           <a href="/" className="text-primary hover:underline">Go back home</a>
         </div>
       </PageShell>
@@ -99,17 +99,17 @@ export default function ViewPastePage() {
             transition={{ duration: 0.45, delay: 0.1 }}
           >
             <GlassCard className="overflow-hidden p-0">
-              <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+              <div className="flex items-center justify-between border-b border-slate-200 px-5 py-4">
                 <div>
-                  <p className="text-sm font-medium text-white">{mappedPaste.language}</p>
-                  <p className="text-xs text-gray-400">Clean reading view</p>
+                  <p className="text-sm font-medium text-slate-900">{mappedPaste.language}</p>
+                  <p className="text-xs text-slate-500">Clean reading view</p>
                 </div>
-                <div className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300">
+                <div className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs text-slate-600">
                   Post ID: {mappedPaste.id}
                 </div>
               </div>
 
-              <div className="min-h-[480px] whitespace-pre-wrap bg-[#0A0F1B] p-6 text-[0.95rem] leading-8 text-gray-200">
+              <div className="min-h-[480px] whitespace-pre-wrap bg-slate-100 p-6 text-[0.95rem] leading-8 text-slate-700">
                 {mappedPaste.code}
               </div>
             </GlassCard>
@@ -120,20 +120,20 @@ export default function ViewPastePage() {
             <GlassCard className="p-5">
               <div className="space-y-4">
                 <div>
-                  <p className="text-sm font-medium text-white">Post metadata</p>
-                  <p className="mt-1 text-sm text-gray-400">
+                  <p className="text-sm font-medium text-slate-900">Post metadata</p>
+                  <p className="mt-1 text-sm text-slate-600">
                     Useful context for your recipient before they open the shared content.
                   </p>
                 </div>
-                <div className="grid gap-3 text-sm text-gray-300">
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3">
-                    <span className="text-gray-500">Type:</span> {mappedPaste.language}
+                <div className="grid gap-3 text-sm text-slate-600">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-100/90 px-4 py-3">
+                    <span className="text-slate-600">Type:</span> {mappedPaste.language}
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3">
-                    <span className="text-gray-500">Expiry:</span> {mappedPaste.expiry}
+                  <div className="rounded-2xl border border-slate-200 bg-slate-100/90 px-4 py-3">
+                    <span className="text-slate-600">Expiry:</span> {mappedPaste.expiry}
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3">
-                    <span className="text-gray-500">Status:</span> Live and shareable
+                  <div className="rounded-2xl border border-slate-200 bg-slate-100/90 px-4 py-3">
+                    <span className="text-slate-600">Status:</span> Live and shareable
                   </div>
                 </div>
               </div>

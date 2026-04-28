@@ -22,8 +22,8 @@ export default function FeatureCard({ feature, index }) {
       </motion.div>
 
       <div className="space-y-3">
-        <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-        <p className="leading-7 text-gray-300">{feature.description}</p>
+        <h3 className="text-xl font-semibold text-slate-900">{feature.title}</h3>
+        <p className="leading-7 text-slate-600">{feature.description}</p>
       </div>
     </GlassCard>
   );

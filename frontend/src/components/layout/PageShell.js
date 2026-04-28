@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 export default function PageShell({ children }) {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-night text-white">
+    <div className="relative min-h-screen overflow-hidden bg-slate-50 text-slate-900">
       <BackgroundBlobs />
       <div className="relative z-10">
         <Navbar />

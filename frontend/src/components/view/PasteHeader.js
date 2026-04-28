@@ -16,10 +16,10 @@ export default function PasteHeader({ paste, copied, onCopy, onDownload }) {
           Created {paste.createdAt}
         </span>
         <div>
-          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h1 className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
             {paste.title}
           </h1>
-          <p className="mt-3 max-w-2xl text-lg text-gray-300">
+          <p className="mt-3 max-w-2xl text-lg text-slate-600">
             Share-ready content with clean reading, direct actions, and premium transitions.
           </p>
         </div>

@@ -19,10 +19,10 @@ export default function CreatePasteForm({ formData, setFormData, onSubmit, isLoa
           <Sparkles className="h-4 w-4 text-secondary" />
           New post
         </span>
-        <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h1 className="text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Create a polished, secure share
         </h1>
-        <p className="text-gray-300">
+        <p className="text-slate-600">
           Configure metadata, privacy, and content type while your live preview updates in real
           time.
         </p>
@@ -46,7 +46,7 @@ export default function CreatePasteForm({ formData, setFormData, onSubmit, isLoa
               onChange={updateField('language')}
             >
               {contentTypes.map((type) => (
-                <option key={type} value={type} className="bg-slate-900">
+                <option key={type} value={type} className="bg-white text-slate-900">
                   {type}
                 </option>
               ))}
@@ -56,7 +56,7 @@ export default function CreatePasteForm({ formData, setFormData, onSubmit, isLoa
           <FieldGroup label="Expiry" delay={0.15}>
             <select className="glass-input" value={formData.expiry} onChange={updateField('expiry')}>
               {expiryOptions.map((option) => (
-                <option key={option} value={option} className="bg-slate-900">
+                <option key={option} value={option} className="bg-white text-slate-900">
                   {option}
                 </option>
               ))}

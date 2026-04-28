@@ -25,10 +25,10 @@ export default function HeroSection() {
           </div>
 
           <div className="space-y-5">
-            <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-3xl text-5xl font-semibold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl">
               Share Anything <span className="text-gradient">Instantly</span>
             </h1>
-            <p className="max-w-2xl text-lg leading-8 text-gray-300 sm:text-xl">
+            <p className="max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
               Create and share paragraphs, notes, drafts, and code with one click. Quick Paste
               delivers a sleek, startup-grade experience for private sharing and fast publishing.
             </p>
@@ -44,11 +44,11 @@ export default function HeroSection() {
             </GradientLink>
           </div>
 
-          <div className="flex flex-wrap gap-3 text-sm text-gray-300">
+          <div className="flex flex-wrap gap-3 text-sm text-slate-600">
             {metrics.map((metric) => (
               <div
                 key={metric}
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-4 py-2"
               >
                 <CheckCircle2 className="h-4 w-4 text-secondary" />
                 {metric}
@@ -58,11 +58,11 @@ export default function HeroSection() {
         </motion.div>
 
         <GlassCard className="overflow-hidden p-0">
-          <div className="border-b border-white/10 px-5 py-4">
+          <div className="border-b border-slate-200 px-5 py-4">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-white">launch-note.txt</p>
-                <p className="text-xs uppercase tracking-[0.3em] text-gray-400">Live typing demo</p>
+                <p className="text-sm font-medium text-slate-900">launch-note.txt</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-500">Live typing demo</p>
               </div>
               <div className="flex gap-2">
                 <span className="h-3 w-3 rounded-full bg-rose-400/90" />
@@ -72,9 +72,9 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="relative min-h-[360px] bg-[#0A0F1B] p-6">
+          <div className="relative min-h-[360px] bg-slate-100 p-6">
             <div className="absolute inset-0 bg-card-gradient opacity-40" />
-            <pre className="scrollbar-hidden relative z-10 overflow-x-auto whitespace-pre-wrap text-sm leading-7 text-gray-200">
+            <pre className="scrollbar-hidden relative z-10 overflow-x-auto whitespace-pre-wrap text-sm leading-7 text-slate-700">
               <code>{typedCode}<span className="animate-pulse text-secondary">|</span></code>
             </pre>
           </div>

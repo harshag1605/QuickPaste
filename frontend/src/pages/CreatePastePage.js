@@ -76,10 +76,10 @@ export default function CreatePastePage() {
           className="mb-10 max-w-2xl"
         >
           <span className="hero-chip">Create post</span>
-          <h1 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-5 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
             Write once, share instantly
           </h1>
-          <p className="mt-4 text-lg leading-8 text-gray-300">
+          <p className="mt-4 text-lg leading-8 text-slate-600">
             A split-screen workflow designed for elegant paragraph sharing across desktop and
             mobile.
           </p>
